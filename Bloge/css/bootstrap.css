@@ -2566,10 +2566,10 @@ output {
           transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 .form-control:focus {
-  border-color: #66afe9;
+  border-color: #e2dcde;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(248, 240, 243, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(243, 243, 243, 0.6);
 }
 .form-control::-moz-placeholder {
   color: #999;
@@ -3059,27 +3059,27 @@ fieldset[disabled] a.btn {
   pointer-events: none;
 }
 .btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+  color: rgb(186, 186, 186);
+  background-color: rgb(17, 17, 17);
+  border-color: #000;
 }
 .btn-default:focus,
 .btn-default.focus {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #8c8c8c;
+  color: #fcfcfc;
+  background-color: #070707;
+  border-color: #141414;
 }
 .btn-default:hover {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: rgb(186, 186, 186);
+  background-color: rgb(17, 17, 17);
+  border-color: #000;
 }
 .btn-default:active,
 .btn-default.active,
 .open > .dropdown-toggle.btn-default {
-  color: #333;
-  background-color: #e6e6e6;
-  border-color: #adadad;
+  color: #fcfcfc;
+  background-color: #070707;
+  border-color: #141414;
 }
 .btn-default:active:hover,
 .btn-default.active:hover,
@@ -4365,6 +4365,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  .navbar-nav > li > img {
+    padding-top: 8px;
+    padding-bottom: 5px;
+    min-width: 32px;
+    min-height: 32px;
+  }
 }
 .navbar-form {
   padding: 10px 15px;
@@ -5461,7 +5467,7 @@ button.list-group-item-danger.active:focus {
 .panel {
   margin-bottom: 20px;
   background-color: #fff;
-  border: 1px solid transparent;
+
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
           box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
@@ -6702,11 +6708,29 @@ button.close {
   .hidden-xs {
     display: none !important;
   }
+  .sidebar {
+    margin-left: 2%!important;
+    margin-right: 2%!important;
+  }
+  .thumbnail{
+    margin-left: 2%!important;
+    margin-right: 2%!important;
+  }
+  .sidebar-first, .sidebar-second {display: none;}
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .hidden-sm {
     display: none !important;
   }
+  .sidebar {
+    margin-left: 2%!important;
+    margin-right: 2%!important;
+  }
+  .thumbnail{
+    margin-left: 2%!important;
+    margin-right: 2%!important;
+  }
+  .sidebar-first, .sidebar-second {display: none;}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
   .hidden-md {

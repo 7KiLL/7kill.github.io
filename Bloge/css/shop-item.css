@@ -39,7 +39,13 @@ body {
 .sidebar {
     margin-right: 20px;
 }
+.sidebar img {
+    width: 100%;
+}
 
+.sidebar a:hover {
+    text-decoration: none;
+}
 footer {
     margin: 50px 0;
 }
@@ -75,3 +81,7 @@ footer {
     position: relative;
     top: 3px;
 }
+.row {width: 99%;}
+.search {max-width: 300px;}
+.nav-search {padding: 0px;}
+.ui-things  {}
