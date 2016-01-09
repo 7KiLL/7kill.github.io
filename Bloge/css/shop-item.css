@@ -84,4 +84,4 @@ footer {
 .row {width: 99%;}
 .search {max-width: 300px;}
 .nav-search {padding: 0px;}
-.ui-things  {}
+a:hover  {text-decoration: none;}
