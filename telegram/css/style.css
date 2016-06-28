@@ -1,8 +1,52 @@
 .date {
-    color: #009e1e;
-    text-align: left!important;
+    color: green;
 }
 .nickname {
-    color: #000b65;
-    text-align: left!important;
+    color: darkblue;
+    text-align: right;
 }
+
+.inputs {display: none;}
+
+.card-footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.text-col {
+    -webkit-transition: all 300ms;
+}
+
+.nickname, .text-col, .date {
+    -webkit-transition: color 175ms;
+    -moz-transition: color 175ms;
+    -ms-transition: color 175ms;
+    -o-transition: color 175ms;
+    transition: color 175ms;
+}
+
+.process-buttons {
+
+}
+.date {
+    white-space: nowrap;
+}
+.nick-date-col {width: auto;}
+.small-col {width: 12%!important;}
+
+.inputs {
+
+}
+
+.alert {
+    position: fixed;
+    left: 50%;
+    z-index: 9999;
+    transform: translateX(-50%);
+    width: 50%;
+    text-align: center;
+}
+
+#editProcess, #newProcess {display: none;}

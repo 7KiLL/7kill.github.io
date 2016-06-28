@@ -23,7 +23,35 @@
                     </fieldset>
                 </div>
                 <div class="card-footer text-muted">
-                    <button type="button" class="btn btn-primary" id="startProcess">Process</button>
+                    <div class="inputs text-xs-left">
+                        <button
+                                class="jscolor {onFineChange:'updateNickColor(this)',styleElement: 'nickColor', valueElement: null} btn"
+                                style="border:1px solid black"
+                                id="nickColor">
+                            Nick color
+                        </button>
+                        <button
+                                class="jscolor {onFineChange:'updateDateColor(this)',styleElement: 'dateColor', valueElement: null} btn"
+                                style="border:1px solid black"
+                                id="dateColor">
+                            Date color
+                        </button>
+                        <button
+                                class="jscolor {onFineChange:'updateTextColor(this)', styleElement: 'textColor', valueElement: null} btn"
+                                style="border:1px solid black"
+                                id="textColor">
+                            Text color
+                        </button>
+                        <div class="checkbox">
+                            <label><input class="comaBox" type="checkbox" value="" >Comas?</label>
+                            <label><input class="dateBox" type="checkbox" checked value="" >Date?</label>
+                        </div>
+                    </div>
+                    <div class="text-xs-right process-buttons">
+                        <button type="button" class="btn btn-primary" id="startProcess">Start</button>
+                        <button type="button" class="btn btn-warning" id="editProcess">Edit</button>
+                        <button type="button" class="btn btn-danger" id="newProcess">Clear</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,6 +60,30 @@
 
 <!-- JS   -->
 <script src="js/jquery-3.0.0.min.js"></script>
+<script src="js/jscolor.js"></script>
 <script src="js/script.js"></script>
+<script>
+    function updateNickColor(jscolor) {
+            $('.nickname').each(function(i, e){
+               $(this).css('color', '#'+jscolor);
+            });
+            localStorage.setItem("name", "#"+jscolor);
+    }
+    function updateDateColor(jscolor) {
+        $('.date').each(function(i, e){
+            $(this).css('color', '#'+jscolor);
+        });
+        localStorage.setItem("date", "#"+jscolor);
+    }
+    function updateTextColor(jscolor) {
+        $('.text-col').each(function(i, e){
+            $(this).css('color', '#'+jscolor);
+        });
+        localStorage.setItem("text", "#"+jscolor);
+    }
+
+
+</script>
 </body>
 </html>
+
