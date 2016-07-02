@@ -1,68 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!--Meta shit-->
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple landing page">
+    <meta name="author" content="7KiLL">
+
+    <!--Bootstrap file-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--FontAwesome fonts-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--Custom CSS file-->
     <link rel="stylesheet" href="css/style.css">
-    <title>My Web</title>
+	<!--Favicon-->
+	<link rel="icon" type="image/ico" href="favicon.ico">
+
+    <title>Telegram Text Processor</title>
 </head>
 <body class="bg-inverse">
+<nav class="navbar navbar-full navbar-dark bg-primary">
+  	<a class="navbar-brand"><i class="fa fa-paper-plane" aria-hidden="true"></i> Simple Telegram's log beautifier <sup>ver 0.2 </sup></a>
+</nav>
+<div id="wrap">
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-lg-offset-1 col-xl-offset-1">
-
-            <br>
+        <div class="col-lg-10 col-lg-offset-1 col-xs-12">
             <div class="card bg-faded text-muted ">
-                <div class="card-header">
-                    <h1 class="text-xs-center">UBER TEXT PROCESSOR</h1>
-                </div>
                 <div class="card-block">
+                    <!--Textarea-->
                     <fieldset class="form-group">
                         <label for="processedText">Enter text here</label>
-                        <textarea class="form-control" id="processedText" rows="3"></textarea>
+                        <textarea class="form-control" id="processedText" rows="6"></textarea>
                     </fieldset>
                 </div>
+                <!--Setting buttons are here-->
                 <div class="card-footer text-muted">
-                    <div class="inputs text-xs-left">
-                        <button
-                                class="jscolor {onFineChange:'updateNickColor(this)',styleElement: 'nickColor', valueElement: null} btn"
-                                style="border:1px solid black"
-                                id="nickColor">
-                            Nick color
-                        </button>
-                        <button
-                                class="jscolor {onFineChange:'updateDateColor(this)',styleElement: 'dateColor', valueElement: null} btn"
-                                style="border:1px solid black"
-                                id="dateColor">
-                            Date color
-                        </button>
-                        <button
-                                class="jscolor {onFineChange:'updateTextColor(this)', styleElement: 'textColor', valueElement: null} btn"
-                                style="border:1px solid black"
-                                id="textColor">
-                            Text color
-                        </button>
-                        <div class="checkbox">
-                            <label><input class="comaBox" type="checkbox" value="" >Comas?</label>
-                            <label><input class="dateBox" type="checkbox" checked value="" >Date?</label>
+                    <div class="inputs">
+                        <div class="btn-group" role="group" aria-label="Color buttons">
+                            <button class="btn btn-danger dateBox">
+                                Date <i class="fa fa-times" aria-hidden="true"></i>
+                            </button>
+                            <button
+                                    class="jscolor {onFineChange:'updateNickColor(this)',styleElement: 'nickColor', valueElement: null} btn"
+                                    id="nickColor">
+                                Nick color
+                            </button>
+                            <button
+                                    class="jscolor {onFineChange:'updateDateColor(this)',styleElement: 'dateColor', valueElement: null} btn"
+                                    id="dateColor">
+                                Date color
+                            </button>
+                            <button
+                                    class="jscolor {onFineChange:'updateTextColor(this)', styleElement: 'textColor', valueElement: null} btn"
+                                    id="textColor">
+                                Text color
+                            </button>
                         </div>
                     </div>
-                    <div class="text-xs-right process-buttons">
-                        <button type="button" class="btn btn-primary" id="startProcess">Start</button>
-                        <button type="button" class="btn btn-warning" id="editProcess">Edit</button>
-                        <button type="button" class="btn btn-danger" id="newProcess">Clear</button>
+                    <div class="btn-group" role="group" aria-label="Control buttons">
+
+                        <button
+                                type="button"
+                                class="btn btn-warning"
+                                id="editProcess">
+                                Edit
+                        </button>
+                        <button
+                                type="button"
+                                class="btn btn-danger"
+                                id="newProcess">
+                                Clear
+                        </button>
                     </div>
+                    <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="startProcess">
+                        Start
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+</div>
+<!--Sticky footer. Info and contacts-->
+<footer class="footer bg-primary">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6 col-xs-12">
+                  <p>Simple parser for comfortable log reading. Hope You will enjoy it.
+                      <br> If You have found the bug or have some advice how to improve parsing contact me, please.</p>
+                  <p class="text-xs-right">7KiLL</p>
+              </div>
+              <div class="col-lg-6 col-xs-12">
+                  <ul>
+                      <li><a target="_blank" href=".."><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+                      <li><a target="_blank" href="http://vk.com/l7kill"><i class="fa fa-vk" aria-hidden="true"></i> VK</a></li>
+                      <li><a target="_blank" href="http://twitter.com/7kill"><i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+</footer>
 
-<!-- JS   -->
+<!--JS-->
 <script src="js/jquery-3.0.0.min.js"></script>
 <script src="js/jscolor.js"></script>
 <script src="js/script.js"></script>
 <script>
+    <!--This is doesn't work in script.js-->
     function updateNickColor(jscolor) {
             $('.nickname').each(function(i, e){
                $(this).css('color', '#'+jscolor);
