@@ -99,25 +99,39 @@
     	<div class="row">
     		<div class="col-lg-8 col-lg-offset-2">
     			<h1>Last.fm Status</h1>
-    			<div class="sig-box center-block">
-    				<img class="lfm-sig" src="http://sig-lfmgen.rhcloud.com/sig.php" alt="">
+    			<div class="center-block">
+    				<img class="lfm-sig img-responsive" src="https://lfm-sig.herokuapp.com/sig.php" alt="">
 				</div>
 				<br>
-				<a target="_blank" href="https://github.com/7kill/lfm-signature"><h3><i class="fa fa-github fa-fw"></i>GitHub</h3></a>
-				
-				<hr>
-				<h1>Andrasta</h1>
-    			<div class="sig-box center-block">
-    				<img class="andrasta" src="http://sig-lfmgen.rhcloud.com/andrasta.php" alt="">
+    			<div class="center-block">
+    				<img class="andrasta img-responsive" src="https://lfm-sig.herokuapp.com/andrasta.php" alt="">
 				</div>
 				<br>
+                <ul class="list-inline">
+                    <li><a target="_blank" href="https://lfm-sig.herokuapp.com"><h3><i class="fa fa-file fa-fw"></i>Live Demo</h3></a></li>
+                    <li><a target="_blank" href="https://github.com/7KiLL/lfm-signature"><h3><i class="fa fa-github fa-fw"></i>GitHub</h3></a></li>
+                </ul>
+
 				<hr>
 				<h1>Now Playing from Last.fm</h1>
     			<div class="center-block">
-    				<img class="lfm-screenshot" src="img/lfm_screenshot.png" alt="">
+    				<img class="lfm-screenshot img-responsive" src="img/lfm_screenshot.png" alt="">
 				</div>
-				<br>	
-				<a target="_blank" href="https://github.com/7kill/lfm_nowplaying"><h3><i class="fa fa-github fa-fw"></i>GitHub</h3></a>
+				<br>
+                <ul class="list-inline">
+                    <li>
+                        <a target="_blank" href="https://github.com/7kill/lfm_nowplaying"><h3><i class="fa fa-github fa-fw"></i>GitHub</h3></a>
+                    </li>
+                </ul>
+                <hr>
+                <h1>Telegram beautifier</h1>
+                <div class="center-block">
+                    <img class="telegream-screenshot img-responsive" src="img/telegram.png" alt="">
+                </div>
+                <ul class="list-inline">
+                    <li><a target="_blank" href="http://7kill.github.io/telegram/"><h3><i class="fa fa-file fa-fw"></i>Live Demo</h3></a></li>
+                    <li><a target="_blank" href="https://github.com/7KiLL/7kill.github.io/blob/master/telegram/js/script.js"><h3><i class="fa fa-github fa-fw"></i>GitHub</h3></a></li>
+                </ul>
     		</div>
     	</div>
     </section>
@@ -190,7 +204,7 @@
 			setTimeout(function() { refresh(e)}, 5000);
 		}
 		setTimeout(function() {refresh('lfm-sig')}, 5000);
-		setTimeout(function() {refresh('andrasta')}, 5000);
+        setTimeout(function() {refresh('andrasta')}, 5000);
 	</script>
 
 </body>
