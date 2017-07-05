@@ -1,6 +1,6 @@
 window.onload = function() {
     var currentDate = new Date();
-    var endDate     = new Date(2017, 6, 11, 9);
+    var endDate     = new Date(2017, 6, 10, 9);
     var flatTime = endDate - currentDate;
 
     function Timer(e) {
